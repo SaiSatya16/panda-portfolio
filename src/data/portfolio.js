@@ -2,7 +2,7 @@ export const portfolioData = {
   personal: {
     name: "Sai Satya Narayana Jonnalagadda",
     title: "Software Development Engineer",
-    email: "sai.satyanarayana@askmeidentity.com",
+    email: "saisatya161734@gmail.com",
     phone: "+918008757469",
     linkedin: "https://www.linkedin.com/in/sai-satya-jonnalagadda-157900225/",
     github: "https://github.com/SaiSatya16",
