@@ -1,0 +1,139 @@
+/* Panda Color Palette */
+:root {
+  --panda-black: #1a1a1a;
+  --panda-white: #ffffff;
+  --panda-gray: #6b7280;
+  --panda-light-gray: #f8fafc;
+  --panda-green: #10b981;
+  --panda-pink: #ec4899;
+  --panda-blue: #3b82f6;
+  --panda-yellow: #fbbf24;
+  --panda-purple: #8b5cf6;
+  
+  /* Light mode colors (default) */
+  --panda-primary: #1a1a1a;
+  --panda-secondary: #6b7280;
+  --panda-background: #ffffff;
+  --panda-surface: #f8fafc;
+  --panda-text: #1a1a1a;
+  --panda-text-secondary: #6b7280;
+  --panda-border: #e2e8f0;
+  --panda-shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode colors */
+[data-theme="dark"] {
+  --panda-primary: #10b981;
+  --panda-secondary: #ec4899;
+  --panda-background: #0f172a;
+  --panda-surface: #1e293b;
+  --panda-text: #f1f5f9;
+  --panda-text-secondary: #94a3b8;
+  --panda-border: #334155;
+  --panda-shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure light mode is explicitly defined */
+[data-theme="light"] {
+  --panda-primary: #1a1a1a;
+  --panda-secondary: #6b7280;
+  --panda-background: #ffffff;
+  --panda-surface: #f8fafc;
+  --panda-text: #1a1a1a;
+  --panda-text-secondary: #6b7280;
+  --panda-border: #e2e8f0;
+  --panda-shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+  background-color: var(--panda-background);
+  color: var(--panda-text);
+}
+
+/* Apply theme to html element */
+html {
+  background-color: var(--panda-background);
+  color: var(--panda-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Panda-themed animations */
+@keyframes pandaFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+@keyframes pandaBounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes pandaWiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+
+.panda-float {
+  animation: pandaFloat 3s ease-in-out infinite;
+}
+
+.panda-bounce {
+  animation: pandaBounce 2s ease-in-out infinite;
+}
+
+.panda-wiggle {
+  animation: pandaWiggle 1s ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--panda-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--panda-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--panda-secondary);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure all elements respect theme */
+* {
+  border-color: var(--panda-border);
+}
+
+/* Fix for input elements */
+input, textarea, select {
+  background-color: var(--panda-background);
+  color: var(--panda-text);
+  border-color: var(--panda-border);
+}
+
+/* Fix for buttons */
+button {
+  background-color: var(--panda-surface);
+  color: var(--panda-text);
+  border-color: var(--panda-border);
+}
+
