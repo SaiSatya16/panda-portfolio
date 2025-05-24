@@ -175,8 +175,8 @@ const contactMethods = ref([
     type: 'email',
     icon: '📧',
     label: 'Email',
-    value: 'sai.satyanarayana@askmeidentity.com',
-    link: 'mailto:sai.satyanarayana@askmeidentity.com',
+    value: 'saisatya161734@gmail.com',
+    link: 'mailto:saisatya161734@gmail.com',
     external: false
   },
   {
